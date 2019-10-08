@@ -287,6 +287,19 @@ p {
     </div>
 </section>
 ```
+```css
+/* Portfolio css */
+.cardGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));    
+    grid-gap: 1rem; 
+    align-content: center;
+}
+.card {
+    margin: 20px;
+    place-self: center;
+}
+```
 
 ### Contact
 ```html
@@ -309,6 +322,18 @@ p {
         </div>
     </div>
 </section>
+```
+```css
+/*Contact css*/
+.contactContainer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.button {
+    margin: 10px;
+}
 ```
 
 ### Javascript/jQuery
