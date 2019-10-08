@@ -58,16 +58,18 @@ p {
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Example 3</title>
+
+    <!-- Link to external css -->
     <link rel="stylesheet" type="text/css" href="./style.css">
-    <title>Flexbox example</title>
 </head>
 <body>
 
-    <div class="container">
-        <div class="card">1</div>
-        <div class="card">2</div>
-        <div class="card">3</div>
-    </div>
+    <ul class="navigation">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
 
 </body>
 </html>
@@ -75,19 +77,39 @@ p {
 
 `style.css`
 ```css
-.container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;    
+.navigation {
+  list-style: none;
+  margin: 0; 
+  background: deepskyblue;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.card {    
-    background-color: #F5F5F5;
-    width: 250px;
-    height: 300px;
-    margin: 10px;
-    text-align: center;
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: white;
+  font-family: "Helvetica Neue"
+}
+
+@media all and (max-width: 1200px) {
+  .navigation {
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .navigation {
+    flex-direction: column;
+    flex-wrap:  wrap;
+    padding: 0;
+  }
+  
+  .navigation a { 
+    text-align: center; 
+    padding: 10px;
+  }
 }
 ```
 
